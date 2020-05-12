@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false|
+|email|string|null: false, unique: true|
 |pasword|string|null: false|
 
 ### Association
