@@ -1,0 +1,20 @@
+.side-bar
+  .side-bar__box
+    .top-items
+      .top-items__name
+        KSK    
+      %ul.top-items__icon
+        %li.top-items__icon__new-group
+          = link_to "#", class: "icon_layer" do
+            = icon('fas', 'layer-group') 
+        %li.top-items__icon__edit
+          = link_to "#", class: "icon_wrench"do
+            = icon('fas', 'wrench')
+
+  .groups
+    .group
+      .group__groupname
+        = link_to "#", class: "group_name" do
+          GROUPNAME
+      .group__groupmessage
+        GROUPMESSAGE

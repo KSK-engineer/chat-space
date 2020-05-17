@@ -1,0 +1,29 @@
+.main_chat
+  .main_chat__mainheader
+    %li.leftbox
+      .leftbox__grouptype
+        group-name
+      .leftbox__member
+        Member:
+        .leftbox__member__user
+          ore
+    %li.editbtn
+      = link_to "#", class: "edit-page" do
+        edit
+  .message_list
+    .comment
+      .comment__listname
+        ksk
+        .comment__listname__time
+          2020/05/16(Sat)00:00:00
+      .comment__talk
+        こんつは
+  .message-form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{type: "text", class: "input-box__image"}
+          = icon('fas','image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}
+        
