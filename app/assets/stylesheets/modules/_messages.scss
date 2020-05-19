@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+
+  $white: #ffffff;
+  $haikei: #253141;
+  $mizuiro: #38aef0;
+  $formiro: #d2d2d2;
+  $mojiiro: #333333;
+  $usuiiro: #999999;
+  $mojiiro2: #434a54;
+
+  .flex-style{
+    display: flex;
+
+    .wrapper {
+      @extend .flex-style;
+    
+      .side-bar {
+        width: 300px;
+        height: 100vh;
+        background-color: $haikei;
+        
+        &__box {
+          height: 100px;
+          font-size: 16px;
+          background-color: $haikei;
+          padding: 0 20px;
+          align-items: center;
+          line-height: 20px;
+
+          .top-items {
+            height: 20px;
+            width: 260px;
+            @extend .flex-style;
+            float: left;
+            margin: 40px 0px 40px 0px;
+            font-weight: bold;
+            justify-content: space-between;
+
+            &__name {
+              height: 20px;
+              color: $white;
+            }
+
+            &__icon {
+              @extend .flex-style;
+              justify-content: flex-end;
+              height: 20px;
+              width: 60px;
+              color: $white; 
+              
+            }
+            
+            a {
+                color: $formiro;
+                float: right;
+            }
+          }
+        }
+        .groups {
+          height: calc(100vh - 100px);
+          background-color: #2f3e51;
+          padding: 20px 20px;
+          
+          .group {
+            height: 91px;
+            width: 100%;
+            margin-bottom: 40px;
+          
+            &__groupname {
+              height: auto;
+              width: 100%;
+              font-size: 15px;
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+            
+            a {
+              color: $white;
+              text-decoration: none;
+            }
+          
+            &__groupmessage {
+              height: auto;
+              color: $white;
+              font-size: 11px;
+            }
+          }   
+        }
+      }
+      .main_chat {
+        width: calc(100vw - 300px);
+        height: 100vh;
+        background-color: $white;
+        
+        &__mainheader {
+          height: 100px;
+          @extend .flex-style;
+          justify-content: space-between;
+          background-color: $white;
+          margin: 0 40px;
+          
+          .leftbox {
+            margin-top: 35px;
+            list-style: none;
+
+            &__grouptype {
+
+            font-size: 20px;
+            color: $mojiiro;
+            margin-bottom: 15px;
+            }
+          
+            &__member {
+            @extend .flex-style;
+            color: $usuiiro;
+            font-size: 12px;
+              &__user {
+                margin-left: 5px;
+              }
+            }
+          }
+          .editbtn {
+            list-style: none;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid $mizuiro;
+            line-height: 40px;
+            margin-top: 28px;
+            position: absolute;
+            right: 40px;
+            padding: 0 20px;
+            
+            .edit-page {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .message_list {
+          height: calc(100vh - 190px);
+          background-color: #fafafa;
+          padding: 35px 40px;
+          
+          .comment {
+            padding-bottom: 46px;
+
+            &__listname {
+              @extend .flex-style;
+              font-size: 16px;
+              color: $mojiiro;
+              margin-bottom: 12px;
+
+              &__time {
+                color: $usuiiro;
+                font-size: 12px;
+                margin-left: 10px;
+              }
+            }
+            
+            &__talk {
+              color: $mojiiro2;
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .message-form {
+          height: 90px;
+          background-color: $formiro;
+          padding: 20px 40px;
+          
+          form{
+            @extend .flex-style;
+            
+            .input-box {
+              height: 50px;
+              width: 100%;
+              @extend .flex-style;
+              position: relative;
+            
+              &__text {
+                width: 100%;
+                height: 50px;
+                color: $mojiiro2;
+                position: relative;
+                padding: 0 40px 0 10px;
+              }
+
+              &__image {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                font-size: 25px;
+                height: 50px;
+                cursor: pointer;
+              
+                &__file {
+                  display: none;
+                }
+              }  
+            }
+            
+            .submit-btn{
+              height: 50px;
+              width: 100px;
+              margin: 0 40px;
+              color: $white;
+              background-color: $mizuiro;
+              cursor: pointer;
+            }
+          }      
+        }
+      }  
+    }
+  }
+}
+
+
