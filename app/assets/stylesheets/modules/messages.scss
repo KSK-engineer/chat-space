@@ -49,6 +49,7 @@
               width: 60px;
               color: $white; 
               
+            
             }
             
             a {
@@ -67,7 +68,7 @@
             width: 100%;
             margin-bottom: 40px;
           
-            &__groupname {
+            &__name {
               height: auto;
               width: 100%;
               font-size: 15px;
@@ -80,7 +81,7 @@
               text-decoration: none;
             }
           
-            &__groupmessage {
+            &__message {
               height: auto;
               color: $white;
               font-size: 11px;

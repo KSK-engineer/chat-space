@@ -2,21 +2,20 @@
   .side-bar__box
     .top-items
       .top-items__name
-        
         = current_user.name
-      
       %ul.top-items__icon
         %li.top-items__icon__new-group
-          = link_to "#", class: "icon_layer" do
+          = link_to new_groups_path do
             = icon('fas', 'layer-group') 
         %li.top-items__icon__edit
           = link_to edit_users_path(current_user), class: "icon_wrench"do
             = icon('fas', 'wrench')
 
   .groups
-    .group
-      .group__groupname
-        = link_to "#", class: "group_name" do
-          GROUPNAME
-      .group__groupmessage
-        GROUPMESSAGE
+    - current_user.group.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            NO MESSAGE
