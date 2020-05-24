@@ -5,16 +5,16 @@
         = current_user.name
       %ul.top-items__icon
         %li.top-items__icon__new-group
-          = link_to new_groups_path() do
-            = icon('fas', 'layer-group') 
+          = link_to new_groups_path do
+            = icon('fas', 'layer-group', class: 'icon') 
         %li.top-items__icon__edit
-          = link_to edit_users_path(current_user), class: "icon_wrench"do
-            = icon('fas', 'wrench')
+          = link_to edit_users_path(current_user) do
+            = icon('fas', 'wrench', class: 'icon')
 
   .groups
     - current_user.group.each do |group|
       .group
-        = link_to '#' do
+        = link_to groups_messages_path(group) do
           .group__name
             = group.name
           .group__message
