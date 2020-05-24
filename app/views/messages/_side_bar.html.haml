@@ -5,7 +5,7 @@
         = current_user.name
       %ul.top-items__icon
         %li.top-items__icon__new-group
-          = link_to new_groups_path do
+          = link_to new_groups_path() do
             = icon('fas', 'layer-group') 
         %li.top-items__icon__edit
           = link_to edit_users_path(current_user), class: "icon_wrench"do
