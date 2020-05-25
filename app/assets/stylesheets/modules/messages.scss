@@ -196,11 +196,12 @@
                 font-size: 25px;
                 height: 50px;
                 cursor: pointer;
+              }
+
+              &__hidden {
+                display: none;
+              }
               
-                &__file {
-                  display: none;
-                }
-              }  
             }
             
             .submit-btn{
