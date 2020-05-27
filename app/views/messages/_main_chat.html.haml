@@ -1,29 +1,23 @@
-.main_chat
-  .main_chat__mainheader
-    %li.leftbox
-      .leftbox__grouptype
-        group-name
-      .leftbox__member
+.main-chat
+  .main-chat__mainheader
+    .main-chat__mainheader__name
+      .main-chat__mainheader__name__grouptype
+        = @group.name
+      .main-chat__mainheader__name__member
         Member:
-        .leftbox__member__user
-          ore
-    %li.editbtn
-      = link_to "#", class: "edit-page" do
+        .main-chat__mainheader__name__member__user
+        - @group.users.each do |user|
+          = user.name
+    .main-chat__mainheader__editbtn
+      = link_to edit_group_path(current_user), class: "edit-page" do
         edit
   .message_list
     = render @messages
-      .comment
-        .comment__listname
-          ksk
-          .comment__listname__time
-            2020/05/16(Sat)00:00:00
-        .comment__talk
-          こんつは
   .message-form
     = form_for [@group, @message] do |f|
       .input-box
-      = f.text_field :text, class: 'input-box__text', placeholder: 'type a message'
+        = f.text_field :text, class: 'input-box__text', placeholder: 'type a message'
         = f.label :image, class: 'input-box__image' do
           = icon('fas','image', class: 'icon')
           = f.file_field :image, class: 'input-box__hidden'
-      = f.submit 'Send', class: 'submit-btn'
+      = f.submit 'Send', class: 'submit-btn' 
