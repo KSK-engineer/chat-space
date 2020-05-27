@@ -12,10 +12,10 @@
             = icon('fas', 'wrench', class: 'icon')
 
   .groups
-    - current_user.group.each do |groups|
+    - current_user.groups.each do |groups|
       .group
         = link_to group_messages_path(groups) do
           .group__name
             = groups.name
           .group__message
-            NO MESSAGE
+            = groups.show_last_message

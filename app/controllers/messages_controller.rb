@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    # binding.pry
   end
 
   def create
@@ -16,6 +17,7 @@ class MessagesController < ApplicationController
       render :index
     end
   end
+
 
   private
 
