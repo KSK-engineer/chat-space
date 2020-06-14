@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
   end
 
   def new
+    binding.pry
     @group = Group.new
     @group.users << current_user
   end
@@ -36,6 +37,7 @@ class GroupsController < ApplicationController
   end
 
   def set_group
+    
     @group = Group.find(params[:id])
   end
 end
