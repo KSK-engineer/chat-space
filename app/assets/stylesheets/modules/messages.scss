@@ -140,7 +140,7 @@
       
         
         .message_list {
-          width: calc(100vw - 300px);
+          width: calc(100vw - 315px);
           height: calc(100vh - 90px);
           overflow: scroll;
           padding-bottom: 100px;
@@ -175,7 +175,7 @@
         }  
 
         .message-form {
-          height: 90px;
+          height: 100px;
           width: calc(100vw - 300px);
           background-color: $formiro;
           padding: 20px 40px;
