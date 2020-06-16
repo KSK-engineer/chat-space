@@ -49,8 +49,13 @@
               height: 20px;
               width: 60px;
               color: $white; 
-              
             
+              &__new-group{
+                margin-left: 0.3rem;
+              }
+              &__edit{
+                margin-left: 0.3rem;
+              }
             }
             
             a {
@@ -89,6 +94,9 @@
               font-size: 11px;
             }
           }   
+        }
+        .groups::-webkit-scrollbar {
+          display:none;
         }
       }
       .main-chat {
@@ -140,10 +148,10 @@
       
         
         .message_list {
-          width: calc(100vw - 315px);
-          height: calc(100vh - 90px);
+          height: calc(100vh - 190px);
           overflow: scroll;
-          padding-bottom: 100px;
+          padding: 46px 40px;
+          background-color: #fafafa;
           
           .message {
             background-color: #fafafa;
@@ -153,7 +161,6 @@
               @extend .flex-style;
 
               &__user-name {
-                
                 font-size: 16px;
                 color: $mojiiro;
                 margin-bottom: 12px;
@@ -173,20 +180,18 @@
             }
           }
         }  
-
+        .message_list::-webkit-scrollbar {
+          display:none;
+        }
         .message-form {
-          height: 100px;
-          width: calc(100vw - 300px);
-          background-color: $formiro;
+          height: 90px;
           padding: 20px 40px;
-          position: absolute;
-          bottom: 0;
-          
+          background-color: #ddd;
+
           form{
             @extend .flex-style;
             
             .input-box {
-              height: 50px;
               width: 100%;
               @extend .flex-style;
               position: relative;
@@ -201,28 +206,27 @@
 
               &__image {
                 position: absolute;
-                top: 5px;
+                top: 10px;
                 right: 10px;
-                font-size: 25px;
-                height: 50px;
+                font-size: 1.3rem;
                 cursor: pointer;
               }
 
               &__hidden {
                 display: none;
               }
-              
             }
             
             .submit-btn{
               height: 50px;
               width: 100px;
-              margin: 0 40px;
+              padding: 0 30px;
+              margin-left: 15px;
               color: $white;
               background-color: $mizuiro;
               cursor: pointer;
             }
-          }      
+          }
         }
       }  
     }  
