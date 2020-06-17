@@ -71,7 +71,6 @@
           overflow: scroll;
           
           .group {
-            height: 91px;
             width: 100%;
             margin-bottom: 40px;
           
@@ -109,7 +108,8 @@
           @extend .flex-style;
           justify-content: space-between;
           background-color: $white;
-          margin: 0 40px;
+          padding: 0 40px;
+          border-bottom:1px solid #eee;
           &__name {
             margin-top: 35px;
             list-style: none;
@@ -130,18 +130,16 @@
             }
           }
           &__editbtn {
-            list-style: none;
             height: 40px;
-            font-size: 16px;
             border: 1px solid $mizuiro;
             line-height: 40px;
             margin-top: 28px;
-            position: absolute;
-            right: 40px;
             padding: 0 20px;
             
             .edit-page {
               text-decoration: none;
+              color: #38aef0;
+              font-size: 16px;
             }
           }
         }
