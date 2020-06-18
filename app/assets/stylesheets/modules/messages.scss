@@ -110,6 +110,7 @@
           background-color: $white;
           padding: 0 40px;
           border-bottom:1px solid #eee;
+          
           &__name {
             margin-top: 35px;
             list-style: none;
@@ -153,7 +154,6 @@
           
           .message {
             background-color: #fafafa;
-            padding: 35px 40px;
           
             .upper-message {
               @extend .flex-style;
